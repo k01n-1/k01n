@@ -1,0 +1,531 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: 'bignoodletitling';
+    src: url('font/bignoodletitling.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общая настройка сайта */
+html, body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 300;
+    color: #696969;
+}
+
+
+
+/* Шапка сайта */
+.topheader {
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 100px;
+}
+
+.logo {
+    font-family: 'bignoodletitling';
+    display: block;
+    position: absolute;
+    top: 12%;
+    bottom: auto;
+}
+
+.logo>a>img {
+    margin-top: -10px;
+    padding-right: 10px;
+    height: 70px;
+}
+
+.logo>a {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    color: #696969;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: initial;
+}
+
+/* Слайдер */
+.banner {
+    background: url(images/slider.jpg) #696969;
+    background-blend-mode: multiply, normal;
+    display: flex;
+    color: #d6d5d5;
+    align-items: center;
+    min-height: 650px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+}
+
+.banner h2 {
+    font-family: 'bignoodletitling';
+    font-size: 3rem;
+}
+
+.banner p {
+    font-family: 'bignoodletitling';
+    font-size: 2rem;
+}
+
+/* Кнопка прокрутки вниз (слайдер) */
+.scrolldown {
+    position: absolute;
+    left: calc(50% - 52px);
+    margin-top: 15%;
+}
+
+.scrolldown img {
+    margin-bottom: 20px;
+}
+
+.scrolldown p {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Общие стили для заголовков */
+h3 {
+    font-family: 'bignoodletitling';
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+/* Стили для секций с белым фоном */
+.head_white_content>span {
+    width: 140px;
+    height: 2px;
+    background: #f4511e;
+    display: inline-block;
+}
+
+.head_white_content {
+    padding: 90px 0 90px;
+    text-align: center;
+    width: 100%;
+}
+
+.head_white_content p {
+    padding: 20px 90px 0px;
+    color: #696969;
+}
+
+/* Блок "О нас" */
+.aboutus {
+    margin-bottom: 90px;
+}
+
+.advantage {
+    text-align: center;
+    width: 100%;
+    background: #ebebeb;
+    padding: 30px;
+}
+
+.advantage span {
+    font-size: 60px;
+    color: #f4511e;
+}
+
+.advantage h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    color: #707070;
+    padding: 25px 0 13px;
+}
+
+.advantage p {
+    color: #707070;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+/* Блок "Мы в цифрах" */
+.somefutures {
+    background-color: #171f23;
+    text-align: center;
+    color: #f6f6f6;
+    padding: 60px 0;
+    display: block;
+}
+
+.head_black_content {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.head_black_content span {
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    margin: 25px auto 0;
+    background: #404040;
+}
+
+/* Цифры сайта */
+.numeral>div>span {
+    font-size: 60px;
+    color: #ff7062;
+}
+
+.numeral>div>p {
+    font-size: 18px;
+    color: #f6f6f6;
+    padding: 30px 0;
+    font-weight: 300;
+}
+
+.numeral>div>h5 {
+    font-size: 48px;
+    color: #f6f6f6;
+    font-weight: 300;
+}
+
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .team-img {
+        height: 200px;
+    }
+    
+    .join-card {
+        padding: 25px;
+    }
+}
+
+/* Стили для блока "Контакты" */
+.getintouch {
+    padding: 80px 0;
+}
+
+.textinput {
+    margin: 40px 0;
+}
+
+.textinput p, .textmsg p {
+    font-weight: 700;
+    color: #696969;
+    margin-bottom: 5px;
+}
+
+.textinput p span, .textmsg p span {
+    color: #f6744b;
+    margin-left: 5px;
+}
+
+.textinput input {
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    width: 90%;
+    height: 40px;
+    outline: 0;
+}
+
+.textmsg textarea {
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    width: 95%;
+    height: 80px;
+    outline: 0;
+    padding-top: 10px;
+}
+
+.getintouch form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.submit {
+    width: 205px;
+    height: 50px;
+    letter-spacing: 1px;
+    background: #f6744b;
+    border: 1px solid #f6744b;
+    color: #fff;
+    display: block;
+    margin: 50px auto 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Реакция на взаимодействие с полями ввода */
+.textinput input:focus, .textmsg textarea:focus {
+    box-shadow: 0px 1px 3px 4px rgba(246, 116, 75, 0.5);
+}
+
+.submit:hover {
+    color: #f6744b;
+    transition: 0.5s;
+    background: white;
+}
+
+/* Блок "Наш офис" */
+.map {
+    padding: 30px 0;
+    background: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.map h4 {
+    color: #ebebeb;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.map span {
+    margin-left: 10px;
+    font-weight: 700;
+    color: #f15324;
+    font-size: 24px;
+}
+
+.accordion-open span::before {
+    font-family: 'Linearicons-Free';
+    content: "\e873";
+}
+
+.accordion-close span::after {
+    font-family: 'Linearicons-Free';
+    content: "\e874";
+}
+
+/* Подвал сайта */
+footer {
+    background: #171f23;
+    text-align: center;
+    padding: 45px 0 60px;
+}
+
+footer h4 {
+    font-family: 'bignoodletitling';
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.logo-ft img {
+    width: 80px;
+}
+
+.social img {
+    width: 40px;
+}
+
+/* FlexSlider стили */
+.flexslider {
+    margin: 0;
+    padding: 0;
+}
+
+.flexslider .slides>li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+
+.flexslider .slides img {
+    display: block;
+}
+
+.flexslider .slides:after {
+    content: "\0020";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.theme-switcher {
+    position: absolute;
+    right: 80px;
+    top: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f4511e;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.top-nav {
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .top-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-nav li {
+    margin-left: 25px;
+  }
+  
+  .top-nav a {
+    color: #696969;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .top-nav a:hover {
+    color: #f4511e;
+  }
+  
+  .top-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f4511e;
+    transition: width 0.3s ease;
+  }
+  
+  .top-nav a:hover::after {
+    width: 100%;
+  }
+
+/* Linearicons стили */
+@font-face {
+    font-family: Linearicons-Free;
+    src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot);
+    src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot?#iefix) format('embedded-opentype'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff2) format('woff2'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.ttf) format('truetype'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff) format('woff'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.svg#Linearicons-Free) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lnr {
+    font-family: Linearicons-Free;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev {
+        opacity: 1;
+        left: 10px;
+    }
+    
+    .flex-direction-nav .flex-next {
+        opacity: 1;
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .head_white_content p {
+        padding: 20px 20px 0px;
+    }
+    
+    .price-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .getintouch form {
+        width: 90%;
+    }
+    .top-nav {
+        display: none;
+      }
+      
+      .menu {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+}
