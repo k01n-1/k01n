@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Калькулятор цен</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+<div class="topheader">
+    <div class="container">
+    <header class="header">
+      <div class="logo">
+      <a href="#0">
+      <img src="images/logo.png" alt="Logo">
+      <!-- В шапку сайта (внутри <header class="header"> после логотипа) -->
+  
+      <p>Студия создания сайтов</p>
+      </a>
+      </div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="team.html">Сотрудники</a></li>
+          <li><a href="career.html">Трудоустройство</a></li>
+          <li><a href="calculator.html">Калькулятор цен</a></li>
+        </ul>
+      </nav>
+      <div class="menu">
+      <a class="primary-nav-trigger" href="#0">
+        <span class="menu-icon"></span>
+      </a>
+      </div>
+    </header>
+    </div>
+  </div>
+  <form id="calculator-form">
+    <div class="form-group">
+        <label>Тип сайта:</label>
+        <select id="site-type" class="form-control">
+            <option value="landing">Лендинг</option>
+            <option value="business">Сайт-визитка</option>
+            <option value="shop">Интернет-магазин</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Количество страниц:</label>
+        <input type="number" id="pages" class="form-control" min="1" value="1">
+    </div>
+    
+    <div class="form-group">
+        <label>Дизайн:</label>
+        <select id="design" class="form-control">
+            <option value="standard">Стандартный</option>
+            <option value="premium">Премиум</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label>Дополнительно:</label>
+        <div class="checkbox">
+            <label><input type="checkbox" id="seo"> SEO-оптимизация (+5000 руб.)</label>
+        </div>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Рассчитать</button>
+    
+    <div id="result" class="mt-3">
+        <h4>Итоговая стоимость: <span id="total-price">0</span> руб.</h4>
+    </div>
+</form>
+  <footer>
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+      <a href="/" class="logo-ft"><img src="images/logo.png" alt=""></a>
+      <h4>Студия Создания Сайтов</h4>
+      <p>Разработано в <a href="https://club.1c.ru/">1C:Клуб программистов</a></p>
+      <a href="https://vk.com/1c_center" class="social">
+        <img src="images/icon-vk.png" alt=""></a>
+      <a href="https://www.instagram.com/club_1c/" class="social">
+        <img src="images/icon-inst.png" alt=""></a>
+    </div>
+    </div>
+    </div>
+  </footer>
+  </main>
+  
+  <!-- Подключение скриптов -->
+  <script src="script.js"></script>
+</body>
+</html>

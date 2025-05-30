@@ -115,6 +115,7 @@ h4 {
     padding: 90px 0 90px;
     text-align: center;
     width: 100%;
+    padding-top: 20%;
 }
 
 .head_white_content p {
@@ -195,18 +196,228 @@ h4 {
     font-weight: 300;
 }
 
+/* Блок "Цены" */
+.price {
+    background-color: #171f23;
+    text-align: center;
+    color: #f6f6f6;
+    padding: 60px 0;
+    display: block;
+    padding-top: 120px;
+}
+
+.addit_info {
+    margin: 20px 0;
+}
+
+.price-content {
+    width: 110%;
+}
+
+/* Рамка при наведении */
+.price-content:hover {
+    border: 1px solid #f4511e;
+}
+
+/* Выделение цифр при наведении */
+.price-content:hover .price-content-body>p>span {
+    color: #f4511e;
+}
+
+/* Голова для блока цен */
+.price-content-head {
+    background: #0e1316;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 40px 0 30px;
+}
+
+.price-content-head h4 {
+    padding-top: 6px;
+    font-size: 24px;
+}
+
+.price-content-head p {
+    margin-top: 25px;
+    padding: 0 25px;
+    font-size: 14px;
+}
+
+/* Тело для блока цен */
+.price-content-body {
+    background: #1f282c;
+    padding: 45px 0 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.price-content-body p {
+    font-size: 15px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Стиль для цифр */
+.price-content-body p span {
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+/* Стиль для кнопки "заказать" */
+.price-content-body a {
+    background: #f4511e;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 10px 30px;
+}
 
 
+.slides {
+    display: flex;
+    align-items: center;
+}
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .team-img {
-        height: 200px;
-    }
-    
-    .join-card {
-        padding: 25px;
-    }
+.innerwidth {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Стили для страницы "Команда" */
+.team-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.team-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-links {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(244, 81, 30, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: bottom 0.3s;
+}
+
+.team-card:hover .social-links {
+    bottom: 0;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h4 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.position {
+    color: #f4511e;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bio {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Блок "Присоединяйся" */
+.join-team {
+    margin-top: 50px;
+}
+
+.join-card {
+    background: #171f23;
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.join-card h4 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.join-card p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.btn-join {
+    background: #f4511e;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-join:hover {
+    background: #e04b1b;
+}
+
+#calculator-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding-top: 120px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#result {
+    background: #e9f7ef;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Показываем только после расчёта */
+}
+
+#calculator-form:valid #result {
+    display: block;
 }
 
 /* Стили для блока "Контакты" */
@@ -528,4 +739,12 @@ input:checked + .slider:before {
         top: 50%;
         transform: translateY(-50%);
       }
+
+      .team-img {
+        height: 200px;
+    }
+    
+    .join-card {
+        padding: 25px;
+    }
 }
