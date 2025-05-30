@@ -420,6 +420,91 @@ h4 {
     display: block;
 }
 
+/* Стили для страницы "Карьера" */
+.vacancy-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.vacancy-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.vacancy-form.hidden {
+    display: none;
+}
+
+.vacancy-form input,
+.vacancy-form textarea,
+.vacancy-form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.vacancy-form textarea {
+    min-height: 100px;
+}
+
+.vacancies-list {
+    display: grid;
+    gap: 20px;
+}
+
+.vacancy-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.vacancy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy-card h4 {
+    margin: 0;
+    color: #f4511e;
+}
+
+.vacancy-card .department {
+    display: inline-block;
+    background: #e9f7ef;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.vacancy-card .description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.vacancy-card.active .description {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
+.delete-vacancy {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
 /* Стили для блока "Контакты" */
 .getintouch {
     padding: 80px 0;

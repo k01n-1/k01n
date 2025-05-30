@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Вакансии</title>
+</head>
+<body>
+    <!-- Шапка сайта -->
+<div class="topheader">
+    <div class="container">
+    <header class="header">
+      <div class="logo">
+      <a href="#0">
+      <img src="images/logo.png" alt="Logo">
+      <!-- В шапку сайта (внутри <header class="header"> после логотипа) -->
+  
+      <p>Студия создания сайтов</p>
+      </a>
+      </div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="team.html">Сотрудники</a></li>
+          <li><a href="career.html">Трудоустройство</a></li>
+          <li><a href="calculator.html">Калькулятор цен</a></li>
+        </ul>
+      </nav>
+      <div class="menu">
+      <a class="primary-nav-trigger" href="#0">
+        <span class="menu-icon"></span>
+      </a>
+      </div>
+    </header>
+    </div>
+  </div>
+    <main class="main-content">
+        <section class="career-section">
+            <div class="container">
+                <!-- Заголовок -->
+                <div class="head_white_content">
+                    <h3>КАРЬЕРА В НАШЕЙ КОМПАНИИ</h3>
+                    <span></span>
+                    <p>Стань частью команды профессионалов!</p>
+                </div>
+
+                <!-- Фильтр вакансий -->
+                <div class="vacancy-filter">
+                    <select id="filter-department" class="form-control">
+                        <option value="all">Все отделы</option>
+                        <option value="design">Дизайн</option>
+                        <option value="development">Разработка</option>
+                        <option value="marketing">Маркетинг</option>
+                    </select>
+                    <button id="add-vacancy-btn" class="btn btn-primary">Добавить вакансию</button>
+                </div>
+
+                <!-- Форма добавления вакансии (изначально скрыта) -->
+                <div id="vacancy-form" class="vacancy-form hidden">
+                    <h4>Новая вакансия</h4>
+                    <input type="text" id="vacancy-title" placeholder="Должность" required>
+                    <select id="vacancy-department" class="form-control">
+                        <option value="design">Дизайн</option>
+                        <option value="development">Разработка</option>
+                        <option value="marketing">Маркетинг</option>
+                    </select>
+                    <textarea id="vacancy-description" placeholder="Описание"></textarea>
+                    <button id="submit-vacancy" class="btn btn-success">Сохранить</button>
+                    <button id="cancel-vacancy" class="btn btn-secondary">Отмена</button>
+                </div>
+
+                <!-- Список вакансий (динамически генерируется) -->
+                <div id="vacancies-list" class="vacancies-list">
+                    <!-- Вакансии будут добавляться здесь через JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- "Подвал" сайта   -->
+<footer>
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+      <a href="/" class="logo-ft"><img src="images/logo.png" alt=""></a>
+      <h4>Студия Создания Сайтов</h4>
+      <p>Разработано в <a href="https://club.1c.ru/">1C:Клуб программистов</a></p>
+      <a href="https://vk.com/1c_center" class="social">
+        <img src="images/icon-vk.png" alt=""></a>
+      <a href="https://www.instagram.com/club_1c/" class="social">
+        <img src="images/icon-inst.png" alt=""></a>
+    </div>
+    </div>
+    </div>
+  </footer>
+
+  <script src="scriptdom.js"></script>
+</body>
+</html>

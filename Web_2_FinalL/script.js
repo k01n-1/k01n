@@ -35,3 +35,4 @@ document.getElementById('calculator-form').addEventListener('submit', function(e
     // Сохраняем данные (опционально)
     localStorage.setItem('lastCalculation', JSON.stringify({ siteType, pages, design, seo, price }));
 });
+
