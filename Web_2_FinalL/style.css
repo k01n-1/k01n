@@ -505,6 +505,78 @@ h4 {
     float: right;
 }
 
+/* Стили для секции книг */
+.api-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+  }
+  
+  .api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .book-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .book-card-content {
+    padding: 20px;
+  }
+  
+  .book-card h4 {
+    margin: 0 0 10px;
+    color: #f4511e;
+    font-size: 18px;
+  }
+  
+  .api-btn {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    background: #f4511e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .api-btn:hover {
+    background: #e04b1b;
+  }
+  
+  .loading-spinner {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #ff6b6b;
+    padding: 20px;
+  }
+
 /* Стили для блока "Контакты" */
 .getintouch {
     padding: 80px 0;
