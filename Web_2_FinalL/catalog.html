@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="topheader">
@@ -14,7 +15,6 @@
       <div class="logo">
       <a href="#0">
       <img src="images/logo.png" alt="Logo">
-      <!-- В шапку сайта (внутри <header class="header"> после логотипа) -->
   
       <p>Студия создания сайтов</p>
       </a>
@@ -26,6 +26,15 @@
           <li><a href="team.html">Сотрудники</a></li>
           <li><a href="career.html">Трудоустройство</a></li>
           <li><a href="calculator.html">Калькулятор цен</a></li>
+          <!-- Переключатель цветовых схем -->
+          <li class="theme-switcher">
+            <i class="fas fa-sun"></i>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <i class="fas fa-moon"></i>
+          </li>
         </ul>
       </nav>
       <div class="menu">
@@ -126,16 +135,16 @@
           <div class="col-lg-12">
               <a href="/" class="logo-ft"><img src="images/logo.png" alt=""></a>
               <h4>Студия Создания Сайтов</h4>
-              <p>Разработано в <a href="https://club.1c.ru/">1C:Клуб программистов</a></p>
-              <a href="https://vk.com/1c_center" class="social">
+              <p>Разработано в <a href="https://math.isu.ru/ru/index.html">ИМИТ ИГУ</a></p>
+              <a href="https://vk.com/dekanatimei" class="social">
                   <img src="images/icon-vk.png" alt=""></a>
-              <a href="https://www.instagram.com/club_1c/" class="social">
-                  <img src="images/icon-inst.png" alt=""></a>
+              <a href="https://t.me/imit_isu" class="social">
+                  <img src="images/icon-tg.png" alt=""></a>
           </div>
       </div>
   </div>
 </footer>
-
+<script src="js/darkTheme.js"></script>
 </body>
 </html>
 

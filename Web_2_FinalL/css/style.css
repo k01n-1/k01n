@@ -1,0 +1,1126 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: 'bignoodletitling';
+    src: url('font/bignoodletitling.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Общая настройка сайта */
+html, body {
+    margin: 0;
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 300;
+    color: #696969;
+}
+
+/* Темная цветовая схема */
+:root {
+    --bg-primary: #ffffff;
+    --text-primary: #333333;
+    --accent: #f4511e;
+  }
+  
+  [data-theme="dark"] {
+    --bg-primary: #121212;
+    --surface-color: #1e1e1e;
+    --surface-hover: #2a2a2a;
+    --text-primary: #e1e1e1;
+    --text-secondary: #a0a0a0;
+    --border: #383838;
+    
+}
+.theme-switcher .fa-sun,
+.theme-switcher .fa-moon {
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .fa-sun {
+  color: var(--accent);
+}
+
+[data-theme="dark"] .fa-moon {
+  color: #ccc;
+}
+
+/* ===== Темная тема для API блока ===== */
+[data-theme="dark"] .api-section {
+    background-color: #1e1e1e;
+}
+
+[data-theme="dark"] .api-section .head_white_content h3,
+[data-theme="dark"] .api-section .head_white_content p {
+    color: #f0f0f0;
+}
+
+[data-theme="dark"] .api-section .head_white_content > span {
+    background-color: var(--accent);
+}
+
+[data-theme="dark"] .book-card {
+    background-color: #2a2a2a;
+    border: 1px solid #383838;
+}
+
+[data-theme="dark"] .book-card-content {
+    color: #e1e1e1;
+}
+
+[data-theme="dark"] .book-card h4 {
+    color: var(--accent);
+}
+
+[data-theme="dark"] .book-card p {
+    color: #b0b0b0;
+}
+
+[data-theme="dark"] .api-btn {
+    background-color: var(--accent);
+    color: white;
+}
+
+[data-theme="dark"] .api-btn:hover {
+    background-color: #e04b1b;
+}
+
+/* ===== Темная тема для шапки (включая каталог) ===== */
+[data-theme="dark"] .topheader,
+[data-theme="dark"] .header {
+    background-color: var(--surface-color) !important;
+    border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .logo>a,
+[data-theme="dark"] .top-nav a {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .top-nav a:hover {
+    color: var(--accent) !important;
+}
+
+/* ===== Темная тема для блока сотрудников ===== */
+[data-theme="dark"] .team-section {
+    background-color: var(--bg-primary);
+}
+
+[data-theme="dark"] .team-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border);
+}
+
+[data-theme="dark"] .team-info h4 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .bio {
+    color: var(--text-secondary) !important;
+}
+
+[data-theme="dark"] .social-links {
+    background: rgba(244, 81, 30, 0.9) !important;
+}
+
+/* ===== Темная тема калькулятора ===== */
+[data-theme="dark"] #calculator-form {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-group label {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] #calculator-form input,
+[data-theme="dark"] #calculator-form select {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] #result {
+    background-color: #2a2a2a;
+    color: var(--text-primary);
+}
+
+/* ===== Темная тема вакансий ===== */
+[data-theme="dark"] .vacancies-list,
+[data-theme="dark"] .vacancy-form {
+    background-color: var(--surface-color) !important;
+    border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .vacancy-card {
+    background-color: var(--surface-color) !important;
+    border-color: var(--border) !important;
+}
+
+[data-theme="dark"] .vacancy-card h4 {
+    color: var(--accent) !important;
+}
+
+[data-theme="dark"] .vacancy-card .description,
+[data-theme="dark"] .vacancy-form label {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .vacancy-form input,
+[data-theme="dark"] .vacancy-form textarea,
+[data-theme="dark"] .vacancy-form select {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-color: var(--border);
+}
+
+/* Адаптивность для шапки в темной теме */
+@media (max-width: 768px) {
+    [data-theme="dark"] .topheader {
+        height: 80px;
+    }
+    
+    [data-theme="dark"] .logo img {
+        height: 50px;
+    }
+    
+    .theme-switcher {
+        top: 25px;
+        right: 15px;
+    }
+}
+  
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+/* header.css */
+.topheader {
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    background: white;
+    height: 80px; /* Уменьшаем высоту для мобильных */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] .topheader {
+    background-color: var(--surface-color) !important;
+    border-bottom: 1px solid var(--border);
+}
+
+.header {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.logo {
+    font-family: 'bignoodletitling';
+    display: flex;
+    align-items: center;
+}
+
+.logo>a>img {
+    height: 50px; /* Уменьшаем логотип для мобильных */
+    padding-right: 8px;
+}
+
+.logo>a {
+    color: #696969;
+    text-transform: uppercase;
+    font-size: 16px; /* Уменьшаем размер текста */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.theme-switcher {
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    top: auto;
+    right: auto;
+  }
+
+  .theme-switcher-container {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+/* Меню для мобильных */
+.menu {
+    display: none; /* По умолчанию скрыто */
+}
+
+.menu-icon {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #696969;
+    position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #696969;
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -8px;
+}
+
+.menu-icon::after {
+    bottom: -8px;
+}
+
+/* Навигация */
+.top-nav {
+    display: flex;
+    position: static;
+    transform: none;
+    right: auto;
+    top: auto;
+}
+
+.top-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav li {
+    margin-left: 15px;
+}
+
+.top-nav a {
+    color: #696969;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 3px;
+    white-space: nowrap; /* Предотвращаем перенос текста */
+}
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    .top-nav {
+        display: none; /* Скрываем обычное меню */
+    }
+    
+    .menu {
+        display: block; /* Показываем кнопку меню */
+    }
+    
+    .logo>a>p {
+        display: none; /* Скрываем текст лого на мобильных */
+    }
+    
+    .theme-switcher {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    /* Стили для открытого мобильного меню */
+    .mobile-menu-open .top-nav {
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 15px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    .mobile-menu-open .top-nav ul {
+        flex-direction: column;
+    }
+    
+    .mobile-menu-open .top-nav li {
+        margin: 10px 0;
+    }
+
+    .theme-switcher-container {
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid #eee;
+      }
+      
+      [data-theme="dark"] .theme-switcher-container {
+        border-top-color: #383838;
+      }
+    
+    [data-theme="dark"] .mobile-menu-open .top-nav {
+        background: var(--surface-color);
+    }
+}
+
+/* Слайдер */
+.banner {
+    background: url(images/slider.jpg) #696969;
+    background-blend-mode: multiply, normal;
+    display: flex;
+    color: #d6d5d5;
+    align-items: center;
+    min-height: 650px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+}
+
+.banner h2 {
+    font-family: 'bignoodletitling';
+    font-size: 3rem;
+}
+
+.banner p {
+    font-family: 'bignoodletitling';
+    font-size: 2rem;
+}
+
+
+/* Общие стили для заголовков */
+h3 {
+    font-family: 'bignoodletitling';
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+/* Стили для секций с белым фоном */
+.head_white_content>span {
+    width: 140px;
+    height: 2px;
+    background: #f4511e;
+    display: inline-block;
+}
+
+.head_white_content {
+    padding: 90px 0 90px;
+    text-align: center;
+    width: 100%;
+    padding-top: 20%;
+}
+
+.head_white_content p {
+    padding: 20px 90px 0px;
+    color: #696969;
+}
+
+/* Блок "О нас" */
+.aboutus {
+    margin-bottom: 90px;
+}
+
+.advantage {
+    text-align: center;
+    width: 100%;
+    background: #ebebeb;
+    padding: 30px;
+}
+
+.advantage span {
+    font-size: 60px;
+    color: #f4511e;
+}
+
+.advantage h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.25px;
+    color: #707070;
+    padding: 25px 0 13px;
+}
+
+.advantage p {
+    color: #707070;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+/* Блок "Мы в цифрах" */
+.somefutures {
+    background-color: #171f23;
+    text-align: center;
+    color: #f6f6f6;
+    padding: 60px 0;
+    display: block;
+}
+
+.head_black_content {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.head_black_content span {
+    display: inline-block;
+    width: 80px;
+    height: 1px;
+    margin: 25px auto 0;
+    background: #404040;
+}
+
+/* Цифры сайта */
+.numeral>div>span {
+    font-size: 60px;
+    color: #ff7062;
+}
+
+.numeral>div>p {
+    font-size: 18px;
+    color: #f6f6f6;
+    padding: 30px 0;
+    font-weight: 300;
+}
+
+.numeral>div>h5 {
+    font-size: 48px;
+    color: #f6f6f6;
+    font-weight: 300;
+}
+
+/* Блок "Цены" */
+.price {
+    background-color: #171f23;
+    text-align: center;
+    color: #f6f6f6;
+    padding: 60px 0;
+    display: block;
+    padding-top: 120px;
+}
+
+.addit_info {
+    margin: 20px 0;
+}
+
+.price-content {
+    width: 110%;
+}
+
+/* Рамка при наведении */
+.price-content:hover {
+    border: 1px solid #f4511e;
+}
+
+/* Выделение цифр при наведении */
+.price-content:hover .price-content-body>p>span {
+    color: #f4511e;
+}
+
+/* Голова для блока цен */
+.price-content-head {
+    background: #0e1316;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 40px 0 30px;
+}
+
+.price-content-head h4 {
+    padding-top: 6px;
+    font-size: 24px;
+}
+
+.price-content-head p {
+    margin-top: 25px;
+    padding: 0 25px;
+    font-size: 14px;
+}
+
+/* Тело для блока цен */
+.price-content-body {
+    background: #1f282c;
+    padding: 45px 0 40px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.price-content-body p {
+    font-size: 15px;
+    padding-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Стиль для цифр */
+.price-content-body p span {
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 2px;
+}
+
+/* Стиль для кнопки "заказать" */
+.price-content-body a {
+    background: #f4511e;
+    color: #ffffff;
+    border-radius: 5px;
+    font-weight: 700;
+    padding: 10px 30px;
+}
+
+
+.slides {
+    display: flex;
+    align-items: center;
+}
+
+.innerwidth {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Стили для страницы "Команда" */
+.team-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.team-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-links {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(244, 81, 30, 0.8);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    transition: bottom 0.3s;
+}
+
+.team-card:hover .social-links {
+    bottom: 0;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-info h4 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.position {
+    color: #f4511e;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bio {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Блок "Присоединяйся" */
+.join-team {
+    margin-top: 50px;
+}
+
+.join-card {
+    background: #171f23;
+    color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.join-card h4 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.join-card p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.btn-join {
+    background: #f4511e;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-join:hover {
+    background: #e04b1b;
+}
+
+#calculator-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding-top: 120px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#result {
+    background: #e9f7ef;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Показываем только после расчёта */
+}
+
+#calculator-form:valid #result {
+    display: block;
+}
+
+/* Стили для страницы "Карьера" */
+.vacancy-filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.vacancy-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.vacancy-form.hidden {
+    display: none;
+}
+
+.vacancy-form input,
+.vacancy-form textarea,
+.vacancy-form select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.vacancy-form textarea {
+    min-height: 100px;
+}
+
+.vacancies-list {
+    display: grid;
+    gap: 20px;
+}
+
+.vacancy-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.vacancy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.vacancy-card h4 {
+    margin: 0;
+    color: #f4511e;
+}
+
+.vacancy-card .department {
+    display: inline-block;
+    background: #e9f7ef;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.vacancy-card .description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.vacancy-card.active .description {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
+.delete-vacancy {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Стили для секции книг */
+.api-section {
+    padding: 60px 0;
+    background: #f9f9f9;
+  }
+  
+  .api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .book-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .book-card-content {
+    padding: 20px;
+  }
+  
+  .book-card h4 {
+    margin: 0 0 10px;
+    color: #f4511e;
+    font-size: 18px;
+  }
+  
+  .api-btn {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    background: #f4511e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .api-btn:hover {
+    background: #e04b1b;
+  }
+  
+  .loading-spinner {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #ff6b6b;
+    padding: 20px;
+  }
+
+/* Стили для блока "Контакты" */
+.getintouch {
+    padding: 80px 0;
+}
+
+.textinput {
+    margin: 40px 0;
+}
+
+.textinput p, .textmsg p {
+    font-weight: 700;
+    color: #696969;
+    margin-bottom: 5px;
+}
+
+.textinput p span, .textmsg p span {
+    color: #f6744b;
+    margin-left: 5px;
+}
+
+.textinput input {
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    width: 90%;
+    height: 40px;
+    outline: 0;
+}
+
+.textmsg textarea {
+    border: 0;
+    border-bottom: 1px solid #cacaca;
+    width: 95%;
+    height: 80px;
+    outline: 0;
+    padding-top: 10px;
+}
+
+.getintouch form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.submit {
+    width: 205px;
+    height: 50px;
+    letter-spacing: 1px;
+    background: #f6744b;
+    border: 1px solid #f6744b;
+    color: #fff;
+    display: block;
+    margin: 50px auto 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Реакция на взаимодействие с полями ввода */
+.textinput input:focus, .textmsg textarea:focus {
+    box-shadow: 0px 1px 3px 4px rgba(246, 116, 75, 0.5);
+}
+
+.submit:hover {
+    color: #f6744b;
+    transition: 0.5s;
+    background: white;
+}
+
+/* Блок "Наш офис" */
+.map {
+    padding: 30px 0;
+    background: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+.map h4 {
+    color: #ebebeb;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.map span {
+    margin-left: 10px;
+    font-weight: 700;
+    color: #f15324;
+    font-size: 24px;
+}
+
+.accordion-open span::before {
+    font-family: 'Linearicons-Free';
+    content: "\e873";
+}
+
+.accordion-close span::after {
+    font-family: 'Linearicons-Free';
+    content: "\e874";
+}
+
+/* Подвал сайта */
+footer {
+    background: #171f23;
+    text-align: center;
+    padding: 45px 0 60px;
+}
+
+footer h4 {
+    font-family: 'bignoodletitling';
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.logo-ft img {
+    width: 80px;
+}
+
+.social img {
+    width: 40px;
+}
+
+.top-nav {
+    position: absolute;
+    right: 120px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .top-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-nav li {
+    margin-left: 25px;
+  }
+  
+  .top-nav a {
+    color: #696969;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .top-nav a:hover {
+    color: #f4511e;
+  }
+  
+  .top-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f4511e;
+    transition: width 0.3s ease;
+  }
+  
+  .top-nav a:hover::after {
+    width: 100%;
+  }
+
+/* Linearicons стили */
+@font-face {
+    font-family: Linearicons-Free;
+    src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot);
+    src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot?#iefix) format('embedded-opentype'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff2) format('woff2'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.ttf) format('truetype'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff) format('woff'),
+        url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.svg#Linearicons-Free) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lnr {
+    font-family: Linearicons-Free;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev {
+        opacity: 1;
+        left: 10px;
+    }
+    
+    .flex-direction-nav .flex-next {
+        opacity: 1;
+        right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .head_white_content p {
+        padding: 20px 20px 0px;
+    }
+    
+    .price-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .getintouch form {
+        width: 90%;
+    }
+    .top-nav {
+        display: none;
+      }
+      
+      .menu {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .team-img {
+        height: 200px;
+    }
+    
+    .join-card {
+        padding: 25px;
+    }
+}
